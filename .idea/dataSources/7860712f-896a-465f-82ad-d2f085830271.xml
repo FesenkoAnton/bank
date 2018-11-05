@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="bank@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.11">
+    <root id="1">
+      <ServerVersion>9.6.10</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="IPulse">
+      <ObjectId>16393</ObjectId>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="3" parent="1" name="bank">
+      <ObjectId>26664</ObjectId>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>106</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="4" parent="1" name="hibernate2">
+      <ObjectId>16409</ObjectId>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="5" parent="1" name="hibernatehomework">
+      <ObjectId>25045</ObjectId>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="6" parent="1" name="infop">
+      <ObjectId>16394</ObjectId>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="7" parent="1" name="postgres">
+      <ObjectId>12401</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <Owner>postgres</Owner>
+    </database>
+    <role id="8" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="10" parent="3" name="information_schema">
+      <ObjectId>12113</ObjectId>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="11" parent="3" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="12" parent="3" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="13" parent="3" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="14" parent="3" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="15" parent="3" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2018-11-05.15:16:03.875</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1865</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="16" parent="3" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="17" parent="3" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="18" parent="3" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="19" parent="3" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="20" parent="3" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="21" parent="3" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <sequence id="22" parent="15" name="cards_id_seq">
+      <ObjectId>27036</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1865</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="23" parent="15" name="bank_accounts_id_seq">
+      <ObjectId>27021</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1864</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="24" parent="15" name="customers_id_seq">
+      <ObjectId>27011</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1863</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <table id="25" parent="15" name="bank_accounts">
+      <ObjectId>27023</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1865</StateNumber>
+    </table>
+    <table id="26" parent="15" name="cards">
+      <ObjectId>27038</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1865</StateNumber>
+    </table>
+    <table id="27" parent="15" name="customers">
+      <ObjectId>27013</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1864</StateNumber>
+    </table>
+    <column id="28" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1864</StateNumber>
+      <DefaultExpression>nextval(&apos;bank_accounts_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>bank_accounts_id_seq</SequenceName>
+    </column>
+    <column id="29" parent="25" name="account">
+      <Position>2</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1864</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="30" parent="25" name="deposit">
+      <Position>3</Position>
+      <DataType>numeric(15,6 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1864</StateNumber>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="31" parent="25" name="credit">
+      <Position>4</Position>
+      <DataType>numeric(15,6 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1864</StateNumber>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="32" parent="25" name="state">
+      <Position>5</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1864</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="33" parent="25" name="bank_accounts_customers">
+      <Position>6</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>1864</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="34" parent="25" name="bank_accounts_pkey">
+      <ObjectId>27027</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="35" parent="25" name="bank_accounts_account_key">
+      <ObjectId>27029</ObjectId>
+      <ColNames>account</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="36" parent="25" name="bank_accounts_pkey">
+      <ObjectId>27028</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>bank_accounts_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="37" parent="25" name="bank_accounts_account_key">
+      <ObjectId>27030</ObjectId>
+      <ColNames>account</ColNames>
+      <UnderlyingIndexName>bank_accounts_account_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="38" parent="25" name="bank_accounts_customers_fkey">
+      <ObjectId>27031</ObjectId>
+      <ColNames>bank_accounts_customers</ColNames>
+      <RefTableId>27013</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>customers</RefTableName>
+      <RefKeyName>customers_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="39" parent="26" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1865</StateNumber>
+      <DefaultExpression>nextval(&apos;cards_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>cards_id_seq</SequenceName>
+    </column>
+    <column id="40" parent="26" name="number">
+      <Position>2</Position>
+      <DataType>varchar(19)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1865</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="41" parent="26" name="cards_bank_accounts">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>1865</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="42" parent="26" name="cards_pkey">
+      <ObjectId>27042</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="43" parent="26" name="cards_number_key">
+      <ObjectId>27044</ObjectId>
+      <ColNames>number</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="44" parent="26" name="cards_pkey">
+      <ObjectId>27043</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>cards_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="45" parent="26" name="cards_number_key">
+      <ObjectId>27045</ObjectId>
+      <ColNames>number</ColNames>
+      <UnderlyingIndexName>cards_number_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="46" parent="26" name="cards_bank_accounts_fkey">
+      <ObjectId>27046</ObjectId>
+      <ColNames>cards_bank_accounts</ColNames>
+      <RefTableId>27023</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>bank_accounts</RefTableName>
+      <RefKeyName>bank_accounts_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="47" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1863</StateNumber>
+      <DefaultExpression>nextval(&apos;customers_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>customers_id_seq</SequenceName>
+    </column>
+    <column id="48" parent="27" name="name">
+      <Position>2</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1863</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="49" parent="27" name="surname">
+      <Position>3</Position>
+      <DataType>varchar(25)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1863</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="50" parent="27" name="phone">
+      <Position>4</Position>
+      <DataType>varchar(12)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1863</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="51" parent="27" name="customers_pkey">
+      <ObjectId>27017</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="52" parent="27" name="customers_phone_key">
+      <ObjectId>27019</ObjectId>
+      <ColNames>phone</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="53" parent="27" name="customers_pkey">
+      <ObjectId>27018</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>customers_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="54" parent="27" name="customers_phone_key">
+      <ObjectId>27020</ObjectId>
+      <ColNames>phone</ColNames>
+      <UnderlyingIndexName>customers_phone_key</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
