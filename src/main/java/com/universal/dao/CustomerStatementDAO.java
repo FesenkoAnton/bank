@@ -4,6 +4,7 @@ import com.universal.connection.MainConnect;
 import com.universal.entity.BankAccount;
 import com.universal.entity.Card;
 import com.universal.entity.Customer;
+import com.universal.proper.PropertFilesData;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
@@ -18,26 +19,13 @@ public class CustomerStatementDAO implements CustomerDAO {
 
     private static final Logger logger = Logger.getLogger(CustomerStatementDAO.class);
 
-    private static final String insertCustomer = "INSERT INTO customers (name, surname, phone) VALUES (?,?,?)";
-    private static final String updateCustomer = "UPDATE customers SET name = ?, surname = ?, phone = ? WHERE id = ?";
-    private static final String deleteCustomer = "DELETE FROM customers WHERE id=?";
-    private static final String getAllCustomers = "SELECT * FROM customers";
-    private static final String getCustomer = "SELECT * FROM customers WHERE id = ?";
-    private static final String getCustomersJoinBankAccounts ="SELECT c.*, ba.*   FROM customers c JOIN bank_accounts ba on c.id = ba.bank_accounts_customers";
-    private static final String getCustomerAccountCard = "SELECT c.id,c.name,c.surname,c.phone, " +
-            "ba.id_bank, ba.account,ba.deposit,ba.credit,ba.state,ba.bank_accounts_customers , " +
-            "c2.id_card, c2.number,c2.cards_bank_accounts  FROM customers c JOIN bank_accounts ba on " +
-            "c.id = ba.bank_accounts_customers JOIN cards c2 on ba.id_bank = c2.cards_bank_accounts WHERE c.id = ?";
-
-
-
     @Override
     public void insertCustomer(String name, String surname, String phone) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         try {
             connection = MainConnect.getConnect();
-            preparedStatement = connection.prepareStatement(insertCustomer);
+            preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("insertCustomer"));
             preparedStatement.setString(1, name);
             preparedStatement.setString(2, surname);
             preparedStatement.setString(3, phone);
@@ -62,7 +50,7 @@ public class CustomerStatementDAO implements CustomerDAO {
         PreparedStatement preparedStatement = null;
         try {
             connection = MainConnect.getConnect();
-            preparedStatement = connection.prepareStatement(updateCustomer);
+            preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("updateCustomer"));
             preparedStatement.setString(1, name);
             preparedStatement.setString(2, surname);
             preparedStatement.setString(3, phone);
@@ -87,7 +75,7 @@ public class CustomerStatementDAO implements CustomerDAO {
         PreparedStatement preparedStatement = null;
         try {
             connection = MainConnect.getConnect();
-            preparedStatement = connection.prepareStatement(deleteCustomer);
+            preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("deleteCustomer"));
             preparedStatement.setLong(1, id);
             preparedStatement.executeUpdate();
 
@@ -110,7 +98,7 @@ public class CustomerStatementDAO implements CustomerDAO {
         PreparedStatement preparedStatement = null;
         try {
             connection = MainConnect.getConnect();
-            preparedStatement = connection.prepareStatement(getAllCustomers);
+            preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("getAllCustomers"));
             List<Customer> customers = new ArrayList<>();
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -142,7 +130,7 @@ public class CustomerStatementDAO implements CustomerDAO {
         Customer customer = new Customer();
         try {
             connection = MainConnect.getConnect();
-            preparedStatement = connection.prepareStatement(getCustomer);
+            preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("getCustomer"));
             preparedStatement.setLong(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -176,7 +164,7 @@ public class CustomerStatementDAO implements CustomerDAO {
 
         try {
             connection = MainConnect.getConnect();
-            preparedStatement = connection.prepareStatement(getCustomerAccountCard);
+            preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("getCustomerAccountCard"));
             preparedStatement.setLong(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {

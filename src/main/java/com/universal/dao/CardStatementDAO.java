@@ -17,11 +17,6 @@ public class CardStatementDAO implements CardDAO {
 
     private static final Logger logger = Logger.getLogger(CustomerStatementDAO.class);
 
-    private static final String insertCard = "INSERT INTO cards (number, cards_bank_accounts) VALUES ( ? ,(select id_bank from bank_accounts where bank_accounts.id_bank = ? ))";
-    private static final String updateCard = "UPDATE cards SET number = ? WHERE id_card = ?";
-    private static final String deleteCard = "DELETE FROM cards WHERE id_card = ?";
-    private static final String getAllCards = "SELECT * FROM cards";
-
     @Override
     public void insertCard(String number, Long bankAccountsID) {
         Connection connection = null;

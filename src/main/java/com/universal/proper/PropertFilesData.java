@@ -17,10 +17,6 @@ public class PropertFilesData {
     private static String propFileNameSQLCommand = "C:\\Projects\\bank\\src\\main\\resources\\sqlqueries.properties";
 
 
-//    public PropertFilesData() {
-//        getPropertiesConnection();
-//    }
-
     public static Properties getProperties() {
         return properties;
     }

@@ -18,12 +18,6 @@ public class BankAccountStatementDAO implements BankAccountDAO {
 
     private static final Logger logger = Logger.getLogger(BankAccountStatementDAO.class);
 
-    private static final String  updateBankAccount ="UPDATE bank_accounts SET account = ?, deposit = ?, credit = ?, state = ? WHERE id_bank = ?";
-    private static final String  insertBankAccount ="INSERT INTO bank_accounts (account, deposit, credit, state, bank_accounts_customers) VALUES (?,?,?,?,(SELECT id FROM customers WHERE customers.id = ?))";
-    private static final String  deleteBankAccount ="DELETE FROM bank_accounts WHERE id_bank = ?;";
-    private static final String  getAllBankAccounts ="SELECT * FROM bank_accounts";
-
-
     @Override
     public void updateBankAccount(String account,
                                   BigDecimal deposit,

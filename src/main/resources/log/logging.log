@@ -110,3 +110,11 @@
 2018-11-08 18:15:46 ERROR QueriesSQL:20 - Unable to load property file: C:\Projects\bank\src\main\resources\sqlqueries.properties
 2018-11-09 11:11:30 ERROR BankAccountStatementDAO:47 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "bank_accounts_account_key"
   Detail: Key (account)=(1234567557) already exists.
+2018-11-09 11:42:04 ERROR CustomerStatementDAO:48 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555560) already exists.
+2018-11-09 11:43:02 ERROR CustomerStatementDAO:48 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555560) already exists.
+2018-11-09 11:43:30 ERROR CustomerStatementDAO:48 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555560) already exists.
+2018-11-09 11:43:58 ERROR CustomerStatementDAO:48 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555560) already exists.
