@@ -1,0 +1,112 @@
+2018-11-06 11:15:49 ERROR CustomerStatementDAO:29 - org.postgresql.util.PSQLException: ERROR: relation "customer" does not exist
+  Position: 13
+2018-11-06 11:17:27 ERROR CustomerStatementDAO:29 - org.postgresql.util.PSQLException: ERROR: relation "customer" does not exist
+  Position: 13
+2018-11-06 11:18:33 ERROR CustomerStatementDAO:29 - org.postgresql.util.PSQLException: ERROR: relation "customer" does not exist
+  Position: 13
+2018-11-06 11:20:59 ERROR CustomerStatementDAO:29 - org.postgresql.util.PSQLException: ERROR: relation "customer" does not exist
+  Position: 13
+2018-11-06 12:32:31 ERROR CustomerStatementDAO:31 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555555) already exists.
+2018-11-06 12:51:25 ERROR CustomerStatementDAO:31 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555555) already exists.
+2018-11-06 13:57:19 ERROR CustomerStatementDAO:31 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555557) already exists.
+2018-11-06 13:57:36 ERROR CustomerStatementDAO:31 - org.postgresql.util.PSQLException: ERROR: value too long for type character varying(12)
+2018-11-06 15:20:29 ERROR CustomerStatementDAO:37 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-06 15:20:40 ERROR CustomerStatementDAO:37 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-06 15:20:49 ERROR CustomerStatementDAO:37 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-06 15:23:59 ERROR CustomerStatementDAO:37 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-06 15:26:02 ERROR CustomerStatementDAO:37 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-06 15:26:24 ERROR CustomerStatementDAO:37 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-06 15:27:36 ERROR CustomerStatementDAO:37 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-06 16:06:22 ERROR CustomerStatementDAO:38 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-06 16:06:22 ERROR CustomerStatementDAO:145 - org.postgresql.util.PSQLException: No value specified for parameter 1.
+2018-11-06 16:12:35 ERROR CustomerStatementDAO:38 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-06 16:12:35 ERROR CustomerStatementDAO:148 - org.postgresql.util.PSQLException: A result was returned when none was expected.
+2018-11-06 16:13:30 ERROR CustomerStatementDAO:38 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-06 16:13:30 ERROR CustomerStatementDAO:147 - org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+2018-11-06 16:19:09 ERROR CustomerStatementDAO:38 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-06 16:19:09 ERROR CustomerStatementDAO:148 - org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+2018-11-06 16:20:18 ERROR CustomerStatementDAO:38 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-06 16:20:18 ERROR CustomerStatementDAO:148 - org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+2018-11-06 16:21:08 ERROR CustomerStatementDAO:38 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-06 16:21:08 ERROR CustomerStatementDAO:149 - org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+2018-11-06 16:22:42 ERROR CustomerStatementDAO:38 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-06 16:23:52 ERROR CustomerStatementDAO:38 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-06 16:24:03 ERROR CustomerStatementDAO:38 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-06 16:24:14 ERROR CustomerStatementDAO:38 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-06 16:28:50 ERROR CustomerStatementDAO:38 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-06 17:54:21 ERROR CustomerStatementDAO:38 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
+  Detail: Key (phone)=(380505555559) already exists.
+2018-11-07 14:49:00 ERROR CustomerStatementDAO:31 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "cards_number_key"
+  Detail: Key (number)=(2254 5777 3245 4777) already exists.
+2018-11-07 14:49:19 ERROR CustomerStatementDAO:31 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "cards_number_key"
+  Detail: Key (number)=(2254 5777 3245 4777) already exists.
+2018-11-07 14:57:38 ERROR CustomerStatementDAO:33 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "cards_number_key"
+  Detail: Key (number)=(2254 5777 3245 4777) already exists.
+2018-11-07 17:51:27 ERROR BankAccountStatementDAO:75 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "bank_accounts_account_key"
+  Detail: Key (account)=(1234567811) already exists.
+2018-11-07 17:53:08 ERROR BankAccountStatementDAO:75 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "bank_accounts_account_key"
+  Detail: Key (account)=(1234567811) already exists.
+2018-11-07 17:54:19 ERROR CustomerStatementDAO:37 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "cards_number_key"
+  Detail: Key (number)=(2254 5777 3245 4777) already exists.
+2018-11-07 17:55:18 ERROR BankAccountStatementDAO:75 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "bank_accounts_account_key"
+  Detail: Key (account)=(1234567811) already exists.
+2018-11-08 08:40:20 ERROR BankAccountStatementDAO:78 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "bank_accounts_account_key"
+  Detail: Key (account)=(1234567811) already exists.
+2018-11-08 08:40:31 ERROR CustomerStatementDAO:202 - org.postgresql.util.PSQLException: The column name account was not found in this ResultSet.
+2018-11-08 08:48:02 ERROR CustomerStatementDAO:203 - org.postgresql.util.PSQLException: The column name account was not found in this ResultSet.
+2018-11-08 08:54:11 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name id_ba was not found in this ResultSet.
+2018-11-08 08:55:49 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name account was not found in this ResultSet.
+2018-11-08 08:56:53 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name account was not found in this ResultSet.
+2018-11-08 08:57:04 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name id_ was not found in this ResultSet.
+2018-11-08 08:57:19 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name name_ was not found in this ResultSet.
+2018-11-08 08:57:31 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name id_ was not found in this ResultSet.
+2018-11-08 08:57:41 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name account was not found in this ResultSet.
+2018-11-08 08:58:42 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name account was not found in this ResultSet.
+2018-11-08 09:11:21 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name id_bank was not found in this ResultSet.
+2018-11-08 09:14:23 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name account was not found in this ResultSet.
+2018-11-08 09:15:30 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name ba.account was not found in this ResultSet.
+2018-11-08 09:19:10 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name ba.account was not found in this ResultSet.
+2018-11-08 09:19:25 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name account was not found in this ResultSet.
+2018-11-08 09:19:49 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name id_bank was not found in this ResultSet.
+2018-11-08 09:20:18 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name id_bank was not found in this ResultSet.
+2018-11-08 09:20:42 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name id_bank was not found in this ResultSet.
+2018-11-08 09:27:42 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name id_bank was not found in this ResultSet.
+2018-11-08 09:28:14 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name id_bank was not found in this ResultSet.
+2018-11-08 09:29:24 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name id_bank was not found in this ResultSet.
+2018-11-08 09:33:21 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column index is out of range: 1, number of columns: 0.
+2018-11-08 09:41:04 ERROR CustomerStatementDAO:205 - org.postgresql.util.PSQLException: The column name id_bank was not found in this ResultSet.
+2018-11-08 11:27:04 ERROR CustomerStatementDAO:36 - org.postgresql.util.PSQLException: ERROR: column "id" does not exist
+  Position: 70
+2018-11-08 11:29:03 ERROR CustomerStatementDAO:36 - org.postgresql.util.PSQLException: ERROR: column "id" does not exist
+  Position: 70
+2018-11-08 11:31:02 ERROR CustomerStatementDAO:36 - org.postgresql.util.PSQLException: ERROR: column "id" does not exist
+  Position: 70
+2018-11-08 17:57:40 ERROR QueriesSQL:20 - Unable to load property file: C:\Projects\bank\src\main\resources\sqlqueries.properties
+2018-11-08 17:58:52 ERROR QueriesSQL:20 - Unable to load property file: C:\Projects\bank\src\main\resources\sqlqueries.properties
+2018-11-08 18:08:21 ERROR QueriesSQL:20 - Unable to load property file: C:\Projects\bank\src\main\resources\sqlqueries.properties
+2018-11-08 18:09:02 ERROR QueriesSQL:20 - Unable to load property file: C:\Projects\bank\src\main\resources\sqlqueries.properties
+2018-11-08 18:10:09 ERROR QueriesSQL:20 - Unable to load property file: C:\Projects\bank\src\main\resources\sqlqueries.properties
+2018-11-08 18:15:46 ERROR QueriesSQL:20 - Unable to load property file: C:\Projects\bank\src\main\resources\sqlqueries.properties
+2018-11-09 11:11:30 ERROR BankAccountStatementDAO:47 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "bank_accounts_account_key"
+  Detail: Key (account)=(1234567557) already exists.

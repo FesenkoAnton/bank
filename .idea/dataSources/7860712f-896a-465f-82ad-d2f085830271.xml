@@ -74,8 +74,8 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-11-05.15:16:03.875</IntrospectionTimestamp>
-      <IntrospectionStateNumber>1865</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-11-08.10:40:01.700</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1993</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -121,18 +121,18 @@
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
-    <sequence id="22" parent="15" name="cards_id_seq">
-      <ObjectId>27036</ObjectId>
+    <sequence id="22" parent="15" name="bank_accounts_id_seq">
+      <ObjectId>27021</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1865</StateNumber>
+      <StateNumber>1864</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
     </sequence>
-    <sequence id="23" parent="15" name="bank_accounts_id_seq">
-      <ObjectId>27021</ObjectId>
+    <sequence id="23" parent="15" name="cards_id_seq">
+      <ObjectId>27036</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1864</StateNumber>
+      <StateNumber>1865</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
       <CacheSize>1</CacheSize>
@@ -160,11 +160,11 @@
       <Owner>postgres</Owner>
       <StateNumber>1864</StateNumber>
     </table>
-    <column id="28" parent="25" name="id">
+    <column id="28" parent="25" name="id_bank">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1864</StateNumber>
+      <StateNumber>1992</StateNumber>
       <DefaultExpression>nextval(&apos;bank_accounts_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
       <SequenceName>bank_accounts_id_seq</SequenceName>
@@ -205,7 +205,7 @@
     </column>
     <index id="34" parent="25" name="bank_accounts_pkey">
       <ObjectId>27027</ObjectId>
-      <ColNames>id</ColNames>
+      <ColNames>id_bank</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="35" parent="25" name="bank_accounts_account_key">
@@ -215,7 +215,7 @@
     </index>
     <key id="36" parent="25" name="bank_accounts_pkey">
       <ObjectId>27028</ObjectId>
-      <ColNames>id</ColNames>
+      <ColNames>id_bank</ColNames>
       <UnderlyingIndexName>bank_accounts_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
@@ -234,11 +234,11 @@
       <RefColNames>id</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="39" parent="26" name="id">
+    <column id="39" parent="26" name="id_card">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1865</StateNumber>
+      <StateNumber>1993</StateNumber>
       <DefaultExpression>nextval(&apos;cards_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
       <SequenceName>cards_id_seq</SequenceName>
@@ -258,7 +258,7 @@
     </column>
     <index id="42" parent="26" name="cards_pkey">
       <ObjectId>27042</ObjectId>
-      <ColNames>id</ColNames>
+      <ColNames>id_card</ColNames>
       <Unique>1</Unique>
     </index>
     <index id="43" parent="26" name="cards_number_key">
@@ -268,7 +268,7 @@
     </index>
     <key id="44" parent="26" name="cards_pkey">
       <ObjectId>27043</ObjectId>
-      <ColNames>id</ColNames>
+      <ColNames>id_card</ColNames>
       <UnderlyingIndexName>cards_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
