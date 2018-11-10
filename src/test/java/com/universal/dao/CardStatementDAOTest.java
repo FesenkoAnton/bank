@@ -3,25 +3,32 @@ package com.universal.dao;
 import com.universal.entity.Card;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
+import static junit.framework.TestCase.assertEquals;
 
 public class CardStatementDAOTest {
 
     @Test
     public void testCardStatementDAO(){
 
+        Card card = new Card();
+        card.setNumber("1223 4567 4567 4449");
+        card.setCardsBankAccounts((long)5);
+
         CardDAO cardDAO = new CardStatementDAO();
 
-//        cardDAO.insertCard("2254 5777 3245 3338",(long)14);
-//        cardDAO.updateCard("2254 5777 3245 3390",(long)22);
-//        cardDAO.deleteCard((long)22);
+        cardDAO.insertCard(card,(long)8);
 
-        List<Card> cards = cardDAO.getAllCards();
+        Card card1 =cardDAO.getCardByNumber("1223 4567 4567 4444");
+        assertEquals(card1.getNumber(),"1223 4567 4567 4444");
 
-        for(Card card:cards){
-            System.out.println(card.getIdCard()+" "+card.getNumber()+" "+card.getCardsBankAccounts());
-        }
+//        cardDAO.deleteCard((long)25);
+
+
+//        List<Card> cards = cardDAO.getAllCards();
+//
+//        for(Card card:cards){
+//            System.out.println(card.getIdCard()+" "+card.getNumber()+" "+card.getCardsBankAccounts());
+//        }
 
 
     }

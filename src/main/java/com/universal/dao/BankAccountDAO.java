@@ -7,17 +7,21 @@ import java.util.List;
 
 public interface BankAccountDAO {
 
-    void updateBankAccount(String account,
-                           BigDecimal deposit,
-                           BigDecimal credit,
-                           Boolean state,
-                           Long idBank);
+//    void insertBankAccount(String account,
+//                           BigDecimal deposit,
+//                           BigDecimal credit,
+//                           Boolean state,
+//                           Long customerId);
 
-    void insertBankAccount(String account,
-                           BigDecimal deposit,
-                           BigDecimal credit,
-                           Boolean state,
-                           Long customerId);
+    void insertBankAccount(BankAccount bankAccount, Long customerId);
+
+//    void updateBankAccount(String account,
+//                           BigDecimal deposit,
+//                           BigDecimal credit,
+//                           Boolean state,
+//                           Long idBank);
+
+    void updateBankAccount(BankAccount bankAccoun);
 
     void deleteBankAccount(Long idBank);
 

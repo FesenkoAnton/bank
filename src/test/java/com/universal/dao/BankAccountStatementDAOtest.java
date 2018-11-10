@@ -2,6 +2,7 @@ package com.universal.dao;
 
 import com.universal.entity.BankAccount;
 import org.junit.Test;
+import org.omg.CORBA.BAD_CONTEXT;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -10,22 +11,22 @@ public class BankAccountStatementDAOtest {
 
     @Test
     public void testCardStatementDAO(){
+
+        BankAccount bankAccount = new BankAccount();
+
+        bankAccount.setAccount("1234567810");
+        bankAccount.setDeposit(BigDecimal.valueOf(133.0));
+        bankAccount.setCredit(BigDecimal.valueOf(134.0));
+        bankAccount.setState(true);
+        bankAccount.setBankAccountsCustomers((long)3);
+
         BankAccountDAO bankAccountDAO = new BankAccountStatementDAO();
 
-//        bankAccountDAO.updateBankAccount("1234567557",
-//                                          BigDecimal.valueOf(150.0),
-//                                          BigDecimal.valueOf(150.0),
-//                                          false,
-//                                          (long) 8);
+//        bankAccountDAO.insertBankAccount(bankAccount,(long)3);
 
-//        bankAccountDAO.insertBankAccount("1234567445",
-//                                          BigDecimal.valueOf(150.0),
-//                                          BigDecimal.valueOf(150.0),
-//                                          false,
-//                                          (long) 3);
-
-//        bankAccountDAO.deleteBankAccount((long)17);
-//
+        bankAccount.setIdBank((long)19);
+        bankAccountDAO.updateBankAccount(bankAccount);
+//        bankAccountDAO.deleteBankAccount((long)18);
 //
 //        List<BankAccount>bankAccounts = bankAccountDAO.getAllBankAccounts();
 //

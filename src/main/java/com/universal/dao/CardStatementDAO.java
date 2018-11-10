@@ -2,6 +2,7 @@ package com.universal.dao;
 
 import com.universal.connection.MainConnect;
 import com.universal.entity.Card;
+import com.universal.entity.Customer;
 import com.universal.proper.PropertFilesData;
 import org.apache.log4j.Logger;
 
@@ -17,17 +18,40 @@ public class CardStatementDAO implements CardDAO {
 
     private static final Logger logger = Logger.getLogger(CustomerStatementDAO.class);
 
+//    @Override
+//    public void insertCard(String number, Long bankAccountsID) {
+//        Connection connection = null;
+//        PreparedStatement preparedStatement = null;
+//        try {
+//            connection = MainConnect.getConnect();
+//            preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("insertCard"));
+//            if(preparedStatement==null){System.out.println("null");}
+//
+//
+//            preparedStatement.setString(1, number);
+//            preparedStatement.setLong(2, bankAccountsID);
+//            preparedStatement.executeUpdate();
+//
+//        } catch (SQLException e) {
+//            logger.error(e);
+//        } finally {
+//            try {
+//                preparedStatement.close();
+//            } catch (SQLException e) {
+//                logger.error(e);
+//            }
+//            MainConnect.putConn(connection);
+//        }
+//    }
+
     @Override
-    public void insertCard(String number, Long bankAccountsID) {
+    public void insertCard(Card card, Long bankAccountsID) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         try {
             connection = MainConnect.getConnect();
             preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("insertCard"));
-            if(preparedStatement==null){System.out.println("null");}
-
-
-            preparedStatement.setString(1, number);
+            preparedStatement.setString(1, card.getNumber());
             preparedStatement.setLong(2, bankAccountsID);
             preparedStatement.executeUpdate();
 
@@ -88,6 +112,37 @@ public class CardStatementDAO implements CardDAO {
             MainConnect.putConn(connection);
         }
     }
+
+    @Override
+    public Card getCardByNumber(String number) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        Card card = new Card();
+        try {
+            connection = MainConnect.getConnect();
+            preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("getCardByNumber"));
+            preparedStatement.setString(1, number);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                card.setIdCard(resultSet.getLong("id_card"));
+                card.setNumber(resultSet.getString("number"));
+                card.setCardsBankAccounts(resultSet.getLong("cards_bank_accounts"));
+            }
+            return card;
+        } catch (SQLException e) {
+            logger.error(e);
+        } finally {
+            try {
+                preparedStatement.close();
+            } catch (SQLException e) {
+                logger.error(e);
+            }
+            MainConnect.putConn(connection);
+        }
+        return card;
+    }
+
+
 
     @Override
     public List<Card> getAllCards() {

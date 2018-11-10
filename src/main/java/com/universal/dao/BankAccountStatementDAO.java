@@ -19,22 +19,18 @@ public class BankAccountStatementDAO implements BankAccountDAO {
     private static final Logger logger = Logger.getLogger(BankAccountStatementDAO.class);
 
     @Override
-    public void updateBankAccount(String account,
-                                  BigDecimal deposit,
-                                  BigDecimal credit,
-                                  Boolean state,
-                                  Long idBank) {
+    public void insertBankAccount(BankAccount bankAccount, Long customerId) {
+
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         try {
             connection = MainConnect.getConnect();
-            preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("updateBankAccount"));
-            preparedStatement.setString(1, account);
-            preparedStatement.setBigDecimal(2, deposit);
-            preparedStatement.setBigDecimal(3, credit);
-            preparedStatement.setBoolean(4, state);
-            preparedStatement.setLong(5, idBank);
-
+            preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("insertBankAccount"));
+            preparedStatement.setString(1, bankAccount.getAccount());
+            preparedStatement.setBigDecimal(2, bankAccount.getDeposit());
+            preparedStatement.setBigDecimal(3, bankAccount.getCredit());
+            preparedStatement.setBoolean(4, bankAccount.getState());
+            preparedStatement.setLong(5, customerId);
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -51,22 +47,18 @@ public class BankAccountStatementDAO implements BankAccountDAO {
     }
 
     @Override
-    public void insertBankAccount(String account,
-                                  BigDecimal deposit,
-                                  BigDecimal credit,
-                                  Boolean state,
-                                  Long customerId) {
-
+    public void updateBankAccount(BankAccount bankAccoun) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         try {
             connection = MainConnect.getConnect();
-            preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("insertBankAccount"));
-            preparedStatement.setString(1, account);
-            preparedStatement.setBigDecimal(2, deposit);
-            preparedStatement.setBigDecimal(3, credit);
-            preparedStatement.setBoolean(4, state);
-            preparedStatement.setLong(5, customerId);
+            preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("updateBankAccount"));
+            preparedStatement.setString(1, bankAccoun.getAccount());
+            preparedStatement.setBigDecimal(2, bankAccoun.getDeposit());
+            preparedStatement.setBigDecimal(3, bankAccoun.getCredit());
+            preparedStatement.setBoolean(4, bankAccoun.getState());
+            preparedStatement.setLong(5, bankAccoun.getIdBank());
+
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -81,6 +73,70 @@ public class BankAccountStatementDAO implements BankAccountDAO {
         }
 
     }
+
+//    @Override
+//    public void updateBankAccount(String account,
+//                                  BigDecimal deposit,
+//                                  BigDecimal credit,
+//                                  Boolean state,
+//                                  Long idBank) {
+//        Connection connection = null;
+//        PreparedStatement preparedStatement = null;
+//        try {
+//            connection = MainConnect.getConnect();
+//            preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("updateBankAccount"));
+//            preparedStatement.setString(1, account);
+//            preparedStatement.setBigDecimal(2, deposit);
+//            preparedStatement.setBigDecimal(3, credit);
+//            preparedStatement.setBoolean(4, state);
+//            preparedStatement.setLong(5, idBank);
+//
+//            preparedStatement.executeUpdate();
+//
+//        } catch (SQLException e) {
+//            logger.error(e);
+//        } finally {
+//            try {
+//                preparedStatement.close();
+//            } catch (SQLException e) {
+//                logger.error(e);
+//            }
+//            MainConnect.putConn(connection);
+//        }
+//
+//    }
+
+//    @Override
+//    public void insertBankAccount(String account,
+//                                  BigDecimal deposit,
+//                                  BigDecimal credit,
+//                                  Boolean state,
+//                                  Long customerId) {
+//
+//        Connection connection = null;
+//        PreparedStatement preparedStatement = null;
+//        try {
+//            connection = MainConnect.getConnect();
+//            preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("insertBankAccount"));
+//            preparedStatement.setString(1, account);
+//            preparedStatement.setBigDecimal(2, deposit);
+//            preparedStatement.setBigDecimal(3, credit);
+//            preparedStatement.setBoolean(4, state);
+//            preparedStatement.setLong(5, customerId);
+//            preparedStatement.executeUpdate();
+//
+//        } catch (SQLException e) {
+//            logger.error(e);
+//        } finally {
+//            try {
+//                preparedStatement.close();
+//            } catch (SQLException e) {
+//                logger.error(e);
+//            }
+//            MainConnect.putConn(connection);
+//        }
+//
+//    }
 
     @Override
     public void deleteBankAccount(Long idBank) {

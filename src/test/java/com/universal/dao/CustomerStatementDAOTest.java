@@ -28,7 +28,7 @@ public class CustomerStatementDAOTest {
 //        System.out.println(customer.getId()+" "+customer.getName()+" "
 //                +customer.getSurname()+" "+customer.getPhone());
 
-        List<Customer> customers = customerDAO.getCustomerAccountCard((long)4);
+        List<Customer> customers = customerDAO.getCustomerAccountCard((long)12);
         for(Customer customer:customers) {
             System.out.println(customer.getId() + " " + customer.getName() + " " + customer.getSurname() + " " + customer.getPhone() + " " +
                     customer.getBankAccount().getIdBank() + " " + customer.getBankAccount().getAccount() + " " + customer.getBankAccount().getDeposit() + " " +

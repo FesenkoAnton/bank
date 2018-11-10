@@ -118,3 +118,7 @@
   Detail: Key (phone)=(380505555560) already exists.
 2018-11-09 11:43:58 ERROR CustomerStatementDAO:48 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "customers_phone_key"
   Detail: Key (phone)=(380505555560) already exists.
+2018-11-09 16:13:45 ERROR CustomerStatementDAO:61 - org.postgresql.util.PSQLException: ERROR: syntax error at or near ")"
+  Position: 67
+2018-11-09 17:10:09 ERROR CustomerStatementDAO:62 - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "cards_number_key"
+  Detail: Key (number)=(1223 4567 4567 4444) already exists.
