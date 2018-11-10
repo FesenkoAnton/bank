@@ -23,11 +23,11 @@ public class Customer {
 
     private String phone;
 
-    private List<BankAccount>bankAccounts = new ArrayList<>();
+    private List<BankAccount>bankAccounts;
 
-    private Card card = new Card();
+    private Card card;
 
-    private BankAccount bankAccount = new BankAccount();
+    private BankAccount bankAccount;
 
     public Card getCard() {
         return card;

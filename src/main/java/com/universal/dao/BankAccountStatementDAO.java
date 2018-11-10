@@ -74,69 +74,6 @@ public class BankAccountStatementDAO implements BankAccountDAO {
 
     }
 
-//    @Override
-//    public void updateBankAccount(String account,
-//                                  BigDecimal deposit,
-//                                  BigDecimal credit,
-//                                  Boolean state,
-//                                  Long idBank) {
-//        Connection connection = null;
-//        PreparedStatement preparedStatement = null;
-//        try {
-//            connection = MainConnect.getConnect();
-//            preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("updateBankAccount"));
-//            preparedStatement.setString(1, account);
-//            preparedStatement.setBigDecimal(2, deposit);
-//            preparedStatement.setBigDecimal(3, credit);
-//            preparedStatement.setBoolean(4, state);
-//            preparedStatement.setLong(5, idBank);
-//
-//            preparedStatement.executeUpdate();
-//
-//        } catch (SQLException e) {
-//            logger.error(e);
-//        } finally {
-//            try {
-//                preparedStatement.close();
-//            } catch (SQLException e) {
-//                logger.error(e);
-//            }
-//            MainConnect.putConn(connection);
-//        }
-//
-//    }
-
-//    @Override
-//    public void insertBankAccount(String account,
-//                                  BigDecimal deposit,
-//                                  BigDecimal credit,
-//                                  Boolean state,
-//                                  Long customerId) {
-//
-//        Connection connection = null;
-//        PreparedStatement preparedStatement = null;
-//        try {
-//            connection = MainConnect.getConnect();
-//            preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("insertBankAccount"));
-//            preparedStatement.setString(1, account);
-//            preparedStatement.setBigDecimal(2, deposit);
-//            preparedStatement.setBigDecimal(3, credit);
-//            preparedStatement.setBoolean(4, state);
-//            preparedStatement.setLong(5, customerId);
-//            preparedStatement.executeUpdate();
-//
-//        } catch (SQLException e) {
-//            logger.error(e);
-//        } finally {
-//            try {
-//                preparedStatement.close();
-//            } catch (SQLException e) {
-//                logger.error(e);
-//            }
-//            MainConnect.putConn(connection);
-//        }
-//
-//    }
 
     @Override
     public void deleteBankAccount(Long idBank) {

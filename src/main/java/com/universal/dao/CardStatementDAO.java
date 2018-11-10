@@ -18,31 +18,6 @@ public class CardStatementDAO implements CardDAO {
 
     private static final Logger logger = Logger.getLogger(CustomerStatementDAO.class);
 
-//    @Override
-//    public void insertCard(String number, Long bankAccountsID) {
-//        Connection connection = null;
-//        PreparedStatement preparedStatement = null;
-//        try {
-//            connection = MainConnect.getConnect();
-//            preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("insertCard"));
-//            if(preparedStatement==null){System.out.println("null");}
-//
-//
-//            preparedStatement.setString(1, number);
-//            preparedStatement.setLong(2, bankAccountsID);
-//            preparedStatement.executeUpdate();
-//
-//        } catch (SQLException e) {
-//            logger.error(e);
-//        } finally {
-//            try {
-//                preparedStatement.close();
-//            } catch (SQLException e) {
-//                logger.error(e);
-//            }
-//            MainConnect.putConn(connection);
-//        }
-//    }
 
     @Override
     public void insertCard(Card card, Long bankAccountsID) {

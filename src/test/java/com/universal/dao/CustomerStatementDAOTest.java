@@ -23,7 +23,7 @@ public class CustomerStatementDAOTest {
 //            System.out.println(customer.getId()+" "+customer.getName()+" "
 //                    +customer.getSurname()+" "+customer.getPhone());
 //        }
-//
+
 //        Customer customer = customerDAO.getCustomer((long)4);
 //        System.out.println(customer.getId()+" "+customer.getName()+" "
 //                +customer.getSurname()+" "+customer.getPhone());

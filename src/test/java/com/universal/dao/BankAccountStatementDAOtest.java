@@ -24,8 +24,8 @@ public class BankAccountStatementDAOtest {
 
 //        bankAccountDAO.insertBankAccount(bankAccount,(long)3);
 
-        bankAccount.setIdBank((long)19);
-        bankAccountDAO.updateBankAccount(bankAccount);
+//        bankAccount.setIdBank((long)19);
+//        bankAccountDAO.updateBankAccount(bankAccount);
 //        bankAccountDAO.deleteBankAccount((long)18);
 //
 //        List<BankAccount>bankAccounts = bankAccountDAO.getAllBankAccounts();
