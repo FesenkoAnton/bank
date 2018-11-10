@@ -6,9 +6,12 @@ import java.util.List;
 
 interface CustomerDAO {
 
-    void insertCustomer(String name, String surname, String phone);
+//    void insertCustomer(String name, String surname, String phone);
+    void insertCustomer(Customer customer);
 
-    void updateCustomer(String name, String surname, String phone, Long id);
+//    void updateCustomer(String name, String surname, String phone, Long id);
+
+    void updateCustomer(Customer customer);
 
     void deleteCustomer(Long id);
 

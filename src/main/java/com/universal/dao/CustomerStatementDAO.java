@@ -20,15 +20,15 @@ public class CustomerStatementDAO implements CustomerDAO {
     private static final Logger logger = Logger.getLogger(CustomerStatementDAO.class);
 
     @Override
-    public void insertCustomer(String name, String surname, String phone) {
+    public void insertCustomer(Customer customer) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         try {
             connection = MainConnect.getConnect();
             preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("insertCustomer"));
-            preparedStatement.setString(1, name);
-            preparedStatement.setString(2, surname);
-            preparedStatement.setString(3, phone);
+            preparedStatement.setString(1, customer.getName());
+            preparedStatement.setString(2, customer.getSurname());
+            preparedStatement.setString(3, customer.getName());
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -45,16 +45,16 @@ public class CustomerStatementDAO implements CustomerDAO {
     }
 
     @Override
-    public void updateCustomer(String name, String surname, String phone, Long id) {
+    public void updateCustomer(Customer customer) {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         try {
             connection = MainConnect.getConnect();
             preparedStatement = connection.prepareStatement(PropertFilesData.getQuery("updateCustomer"));
-            preparedStatement.setString(1, name);
-            preparedStatement.setString(2, surname);
-            preparedStatement.setString(3, phone);
-            preparedStatement.setLong(4, id);
+            preparedStatement.setString(1, customer.getName());
+            preparedStatement.setString(2, customer.getSurname());
+            preparedStatement.setString(3, customer.getPhone());
+            preparedStatement.setLong(4, customer.getId());
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -68,6 +68,7 @@ public class CustomerStatementDAO implements CustomerDAO {
             MainConnect.putConn(connection);
         }
     }
+
 
     @Override
     public void deleteCustomer(Long id) {
@@ -205,6 +206,7 @@ public class CustomerStatementDAO implements CustomerDAO {
         }
         return Collections.emptyList();
     }
+
 
     @Override
     public Customer getCustomerJoinBankAcc(Long id) {
